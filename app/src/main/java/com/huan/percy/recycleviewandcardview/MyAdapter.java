@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
@@ -35,6 +36,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         viewHolder.title_tv.setText(list.get(i).get("title").toString());
         viewHolder.content_tv.setText(list.get(i).get("content").toString());
+        viewHolder.face.setImageResource((int)list.get(i).get("face"));
         Log.d("content", "before bind:" +list.get(i).get("title").toString());
         Log.d("content", "after bind:" + viewHolder.title_tv.getText().toString());
     }
@@ -47,11 +49,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView title_tv;
         public TextView content_tv;
+        public ImageView face;
 
         public ViewHolder(View itemView) {
             super(itemView);
             title_tv = (TextView) itemView.findViewById(R.id.item_title_tv);
             content_tv = (TextView) itemView.findViewById(R.id.item_content_tv);
+            face = (ImageView) itemView.findViewById(R.id.face);
         }
     }
 

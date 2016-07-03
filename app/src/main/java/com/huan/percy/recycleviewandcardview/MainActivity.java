@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 listItem.put("title", "title "+ i);
                 listItem.put("content", "content" + i);
             }
-
+            listItem.put("face", R.drawable.heroes_16);
             products.add(listItem);
         }
     }

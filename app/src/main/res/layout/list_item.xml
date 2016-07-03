@@ -21,6 +21,13 @@
             android:layout_marginRight="10dp"
             android:layout_gravity="center_vertical"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/face"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
 
             <TextView
                 android:id="@+id/item_title_tv"
